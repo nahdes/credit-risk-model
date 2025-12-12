@@ -180,12 +180,6 @@ All predictions include:
 4. Push to branch (`git push origin feature/improvement`)
 5. Create Pull Request
 
-## Contact
-
-Analytics Team - Bati Bank  
-Email: analytics@batibank.com  
-Documentation: https://docs.batibank.com/credit-scoring
-
 ## References
 
 - Huang et al. (2018). RFMS Method for Credit Scoring Based on Bank Card Transaction Data. _Statistica Sinica_.

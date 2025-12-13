@@ -123,6 +123,41 @@ credit-risk-model/
 └── README.md              # This file
 ```
 
+## EDA Insights
+
+### Dataset Overview
+
+The exploratory data analysis (EDA) reveals a comprehensive transaction dataset with 95,662 records across 16 columns, covering customer interactions in Uganda (CountryCode: 256). All transactions are denominated in UGX (Ugandan Shilling). Memory usage is approximately 66.48 MB, with high-cardinality ID fields (e.g., 95,662 unique TransactionIds, 3,633 unique AccountIds) indicating a diverse and granular customer base.
+
+### Key Statistics
+
+Numerical features show significant variability, highlighting opportunities for RFMS-based feature engineering:
+
+| Feature         | Count  | Mean     | Std        | Min        | 25% | 50%   | 75%   | Max       |
+| --------------- | ------ | -------- | ---------- | ---------- | --- | ----- | ----- | --------- |
+| CountryCode     | 95,662 | 256.00   | 0.00       | 256        | 256 | 256   | 256   | 256       |
+| Amount          | 95,662 | 6,717.85 | 123,306.80 | -1,000,000 | -50 | 1,000 | 2,800 | 9,880,000 |
+| Value           | 95,662 | 9,900.58 | 123,122.10 | 2          | 275 | 1,000 | 5,000 | 9,880,000 |
+| PricingStrategy | 95,662 | 2.26     | 0.73       | 0          | 2   | 2     | 2     | 4         |
+| FraudResult     | 95,662 | 0.002    | 0.045      | 0          | 0   | 0     | 0     | 1         |
+
+- **Imbalance in Target**: FraudResult (used as a default proxy) is highly imbalanced, with only ~0.2% positive cases (193 frauds). This underscores the need for techniques like SMOTE or class weighting in modeling to address rarity of defaults.
+- **Transaction Variability**: Amounts include negatives (e.g., refunds), with extreme outliers (max ~9.88M UGX). Value often exceeds Amount, suggesting inclusion of fees or adjustments—critical for Monetary feature derivation.
+- **Categorical Distribution**: ProductCategory features include airtime (high frequency, low value), financial_services (mixed signs), and utility_bill (higher values). ChannelId and ProviderId show batching patterns, useful for Frequency and Recency signals.
+
+### Time-Based Patterns
+
+Transactions span from November 2018 onward (exact range: min 2018-11-15T02:18:49Z). Key temporal insights:
+
+- **Daily Volume**: Steady growth with peaks on weekends, indicating consumer-driven spikes.
+- **Hourly Peaks**: Highest activity between 12-18h (afternoon/evening), aligning with post-work shopping—ideal for Recency thresholding.
+- **Day-of-Week**: Fridays and Saturdays dominate (~15-20% higher than weekdays), while Sundays are lowest.
+- **Monthly Trends**: Even distribution, but Q4 shows slight upticks, possibly seasonal eCommerce effects.
+
+These patterns inform RFMS features (e.g., recency <7 days flags active users) and reveal stability for credit risk proxying, though high volatility (Std in Amount) signals need for Standard Deviation monitoring to detect unstable profiles.
+
+Visualizations (daily trends, hourly bars, DoW/monthly distributions) in `notebooks/eda.ipynb` support model validation and stakeholder communication.
+
 ## Model Performance Metrics
 
 The model is evaluated using:
@@ -179,12 +214,6 @@ All predictions include:
 3. Commit changes (`git commit -am 'Add new feature'`)
 4. Push to branch (`git push origin feature/improvement`)
 5. Create Pull Request
-
-## Contact
-
-Analytics Team - Bati Bank  
-Email: analytics@batibank.com  
-Documentation: https://docs.batibank.com/credit-scoring
 
 ## References
 

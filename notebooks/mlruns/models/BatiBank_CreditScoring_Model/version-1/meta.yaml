@@ -1,0 +1,15 @@
+creation_timestamp: 1765893038121
+current_stage: None
+deployment_job_state: null
+description: 'Best model: LogisticRegression_GridSearch with ROC-AUC=1.0000'
+last_updated_timestamp: 1765893038224
+model_id: m-4ab98ac8d2d7476f9d2ba2d4c2c02b15
+name: BatiBank_CreditScoring_Model
+run_id: fdb685413c1b4bddb2bce8473660c25b
+run_link: null
+source: models:/m-4ab98ac8d2d7476f9d2ba2d4c2c02b15
+status: READY
+status_message: null
+storage_location: file:c:/Users/reus/Desktop/Tenx/credit-risk-model/notebooks/mlruns/292577243299913946/models/m-4ab98ac8d2d7476f9d2ba2d4c2c02b15/artifacts
+user_id: null
+version: 1

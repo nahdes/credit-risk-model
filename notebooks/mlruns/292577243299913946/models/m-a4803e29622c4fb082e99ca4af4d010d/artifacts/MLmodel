@@ -1,0 +1,54 @@
+artifact_path: file:c:/Users/reus/Desktop/Tenx/credit-risk-model/notebooks/mlruns/292577243299913946/models/m-a4803e29622c4fb082e99ca4af4d010d/artifacts
+flavors:
+  python_function:
+    data: model.ubj
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.xgboost
+    python_version: 3.13.5
+  xgboost:
+    code: null
+    data: model.ubj
+    model_class: xgboost.sklearn.XGBClassifier
+    model_format: ubj
+    xgb_version: 3.1.2
+is_signature_from_type_hint: false
+mlflow_version: 3.7.0
+model_id: m-a4803e29622c4fb082e99ca4af4d010d
+model_size_bytes: 98656
+model_uuid: m-a4803e29622c4fb082e99ca4af4d010d
+prompts: null
+run_id: b5f7d398d0af46b9a45802fb75968391
+signature:
+  inputs: '[{"type": "double", "name": "Recency", "required": true}, {"type": "double",
+    "name": "Total_Transaction_Amount", "required": true}, {"type": "double", "name":
+    "Average_Transaction_Amount", "required": true}, {"type": "double", "name": "Median_Transaction_Amount",
+    "required": true}, {"type": "double", "name": "Min_Transaction_Amount", "required":
+    true}, {"type": "double", "name": "Max_Transaction_Amount", "required": true},
+    {"type": "double", "name": "Std_Transaction_Amount", "required": true}, {"type":
+    "double", "name": "Q1_Transaction_Amount", "required": true}, {"type": "double",
+    "name": "Q3_Transaction_Amount", "required": true}, {"type": "double", "name":
+    "Transaction_Count", "required": true}, {"type": "double", "name": "Transaction_Range",
+    "required": true}, {"type": "double", "name": "CV_Transaction_Amount", "required":
+    true}, {"type": "double", "name": "IQR_Transaction_Amount", "required": true},
+    {"type": "double", "name": "Customer_Tenure_Days", "required": true}, {"type":
+    "double", "name": "Avg_Transactions_Per_Day", "required": true}, {"type": "double",
+    "name": "Avg_Transaction_Hour", "required": true}, {"type": "double", "name":
+    "Std_Transaction_Hour", "required": true}, {"type": "double", "name": "Min_Transaction_Hour",
+    "required": true}, {"type": "double", "name": "Max_Transaction_Hour", "required":
+    true}, {"type": "double", "name": "Most_Common_DayOfWeek", "required": true},
+    {"type": "double", "name": "Weekend_Transaction_Ratio", "required": true}, {"type":
+    "double", "name": "Unique_Months_Active", "required": true}, {"type": "double",
+    "name": "Most_Common_DayOfWeek_WoE", "required": true}, {"type": "double", "name":
+    "Recency_WoE", "required": true}, {"type": "double", "name": "Transaction_Count_WoE",
+    "required": true}, {"type": "double", "name": "Average_Transaction_Amount_WoE",
+    "required": true}, {"type": "double", "name": "Std_Transaction_Amount_WoE", "required":
+    true}, {"type": "double", "name": "CV_Transaction_Amount_WoE", "required": true},
+    {"type": "double", "name": "Avg_Transaction_Hour_WoE", "required": true}, {"type":
+    "double", "name": "Weekend_Transaction_Ratio_WoE", "required": true}, {"type":
+    "double", "name": "Good_Bad_Label", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "int64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-12-16 13:50:29.718365'

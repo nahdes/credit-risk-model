@@ -1,0 +1,14 @@
+artifact_uri: file:c:/Users/reus/Desktop/Tenx/credit-risk-model/notebooks/mlruns/292577243299913946/082015b10fc742a68376257ee129a460/artifacts
+end_time: 1765892489452
+entry_point_name: ''
+experiment_id: '292577243299913946'
+lifecycle_stage: active
+run_id: 082015b10fc742a68376257ee129a460
+run_name: LogisticRegression_GridSearch
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765892489345
+status: 4
+tags: []
+user_id: reus

@@ -1,0 +1,10 @@
+artifact_location: file:c:/Users/reus/Desktop/Tenx/credit-risk-model/notebooks/mlruns/292577243299913946/models/m-a4803e29622c4fb082e99ca4af4d010d/artifacts
+creation_timestamp: 1765893029635
+experiment_id: '292577243299913946'
+last_updated_timestamp: 1765893034681
+model_id: m-a4803e29622c4fb082e99ca4af4d010d
+model_type: null
+name: model
+source_run_id: b5f7d398d0af46b9a45802fb75968391
+status: 2
+status_message: null

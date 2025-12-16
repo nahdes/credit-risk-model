@@ -1,0 +1,14 @@
+artifact_uri: file:c:/Users/reus/Desktop/Tenx/credit-risk-model/notebooks/mlruns/292577243299913946/91f4c14c3d3e427dbbcf33305fbe465f/artifacts
+end_time: 1765892604532
+entry_point_name: ''
+experiment_id: '292577243299913946'
+lifecycle_stage: active
+run_id: 91f4c14c3d3e427dbbcf33305fbe465f
+run_name: DecisionTree_RandomSearch
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765892599950
+status: 3
+tags: []
+user_id: reus
